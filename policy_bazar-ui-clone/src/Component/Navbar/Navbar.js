@@ -18,53 +18,59 @@ const Navbar = () => {
             alt="policy bazar logo"
           />
         </div>
-          <header className="nav_header">
-            <nav className="nav_menu  flex justify-between items-center align-middle gap-9 w-100">
-              <ul className="flex gap-12">
-                {navHeaders.length > 0 &&
-                  navHeaders.map((item, index) => {
-                    return (
-                      <React.Fragment key={index}>
-                        <li
-                          className="text-[#172B4D] p-2 hover:cursor-pointer hover:text-blue-700 relative"
-                          style={{ listStyle: "none" }}
-                          onMouseEnter={() => setDropDown(index)}
-                          onMouseLeave={() => setDropDown(null)}
-                        >
-                          {item.label}
-                          {dropDown === index ? (
+        <header className="nav_header">
+          <nav className="nav_menu  flex justify-between items-center align-middle gap-9 w-100">
+            <ul className="flex gap-12">
+              {navHeaders.length > 0 &&
+                navHeaders.map((item, index) => {
+                  return (
+                    <React.Fragment key={index}>
+                      <li
+                        className="text-[#172B4D] p-2 hover:cursor-pointer hover:text-blue-700 relative"
+                        style={{ listStyle: "none" }}
+                        onMouseEnter={() => setDropDown(index)}
+                        onMouseLeave={() => setDropDown(null)}
+                      >
+                        {item.label}
+                        {item.menuItem &&
+                          (dropDown === index ? (
                             <KeyboardArrowUpIcon />
                           ) : (
                             <KeyboardArrowDownIcon />
-                          )}
+                          ))}
                         {item.menuItem && dropDown === index && (
-                          <div className="absolute top-10 bg-[#eceff794]
-                           rounded-sm py-2.5 border text-gray-700 w-56 z-10"                         
+                          <div
+                            className="absolute bg-[#eceff794]
+                           rounded-sm py-2.5 border text-gray-700 w-full"
                           >
-                              {item.menuItem.map((data) => {
-                                return (
-                                  <React.Fragment>
-                                    <ul>
-                                      <li className="ml-3 hover:cursor-pointer hover:text-blue-700">
-                                        {data.label}
-                                        </li>
-                                    </ul>
-                                  </React.Fragment>
-                                );
-                              })}
+                            {item.menuItem.map((data) => {
+                              return (
+                                <React.Fragment>
+                                  {/* <div
+                            className="absolute top-10 bg-[#eceff794]
+                           rounded-sm py-2.5 border text-gray-700 w-56 z-10"
+                          ></div> */}
+                                  <ul>
+                                    <li className="ml-3 hover:cursor-pointer hover:text-blue-700">
+                                      {data.label}
+                                    </li>
+                                  </ul>
+                                </React.Fragment>
+                              );
+                            })}
                           </div>
                         )}
-                        </li>
-                      </React.Fragment>
-                    );
-                  })}
-              </ul>
+                      </li>
+                    </React.Fragment>
+                  );
+                })}
+            </ul>
 
-              <button className="border-2 rounded-lg px-2 py-0" style={{}}>
-                Sign in
-              </button>
-            </nav>
-          </header>
+            <button className="border-2 rounded-lg px-2 py-0" style={{}}>
+              Sign in
+            </button>
+          </nav>
+        </header>
       </div>
     </div>
   );
