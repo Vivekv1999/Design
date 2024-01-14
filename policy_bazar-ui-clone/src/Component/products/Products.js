@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import MoveableModal from "./MoveableModal";
 
 const productsDetail = [
   {
@@ -88,6 +89,7 @@ const productsDetail = [
 ];
 
 const Products = () => {
+  const [showMoveableModal,setShowMoveableModal]=useState(false)
   return (
     <>
       <div className="app_main_wrapper p-4">
@@ -126,9 +128,17 @@ const Products = () => {
           <button 
           className="border-solid border-2 mt-3 border-blue-500	w-32 place-content-center 
            rounded-2xl text-[12px] p-1 px-3 py-2 font-medium text-blue-500"
+           onClick={()=>{
+            setShowMoveableModal(true)
+           }}
           >
             View all products</button>
         </div>
+       { showMoveableModal &&
+        <MoveableModal 
+        showMoveableModal={showMoveableModal}
+        setShowMoveableModal={setShowMoveableModal}
+        />}
       </div>
     </>
   );

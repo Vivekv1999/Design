@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import Slider from 'react-slick';
+import React, { useEffect, useRef, useState } from "react";
+import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,49 +9,51 @@ const sliderImage = [
     image: "assets/Slider_image/a1.jfif",
     name: "First Image",
     backgroundColor: "#0088FE",
-    index:0
+    index: 0,
   },
   {
     image: "assets/Slider_image/a2.jfif",
     name: "Second Image",
     backgroundColor: "#00C49F",
-    index:1
+    index: 1,
   },
   {
     image: "assets/Slider_image/a3.jfif",
     name: "Thirt Image",
     backgroundColor: "#FFBB28",
-    index:2
+    index: 2,
   },
   {
     image: "assets/Slider_image/a4.jfif",
     name: "Fourth Image",
     backgroundColor: "#0088FE",
-    index:3
+    index: 3,
   },
   {
     image: "assets/Slider_image/a5.png",
     name: "Fifth Image",
     backgroundColor: "#00C49F",
-    index:4
+    index: 4,
   },
   {
     image: "assets/Slider_image/a6.jfif",
     name: "Sixth Image",
     backgroundColor: "#FFBB28",
-    index:5
+    index: 5,
   },
   {
     image: "assets/Slider_image/a7.png",
     name: "Sixth Image",
     backgroundColor: "#FFBB28",
-    index:6
+    index: 6,
   },
 ];
 
 const SliderImage = () => {
   const sliderRef = useRef(null);
-  const [currentData, setCurrentData] = useState(sliderImage[sliderImage.length - 1]);
+  const [currentData, setCurrentData] = useState(
+    sliderImage[sliderImage.length - 1]
+  );
 
   const settings = {
     class: "image-slider",
@@ -63,7 +65,7 @@ const SliderImage = () => {
     speed: 500,
     slidesToScroll: 3,
     slidesToShow: 3,
-    rtl: true,
+    rtl: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -94,32 +96,31 @@ const SliderImage = () => {
     }
   };
 
-
   return (
     <div className="app_main_wrapper app_sliderImage p-4">
-     <Slider
-              afterChange={(index) => {
-                handleAfterChange(index);
-              }}
-              {...settings}
-              ref={sliderRef}
-              >
-              {sliderImage.map((item, index) => {
-                const { image } = item;
-                return (
-                  <div
-                    key={index}
-                  >
-                    <div className="relative ">
-                      <img src={image} width="250" height="200"alt={image ?? ""}/>
-                    </div>
-                  </div>
-                );
-              })}
-            </Slider>
+      <div className="px-40">
+        <Slider
+          afterChange={(index) => {
+            handleAfterChange(index);
+          }}
+          {...settings}
+          ref={sliderRef}
+        >
+          {sliderImage.map((item, index) => {
+            const { image } = item;
+            return (
+              <div key={index}>
+                <div className="relative" style={{background:"grey",display:"flex",justifyContent:"center",margin:"5px",height:"225px"}}>
+                  <img src={image} width="100%" height="100%" alt={image ?? ""} />
+                </div>
+              </div>
+            );
+          })}
+          {console.log(sliderRef,"setCurrentDatasetCurrentData")}
+        </Slider>
+      </div>
+    </div>
+  );
+};
 
-  </div>
-  )
-}
-
-export default SliderImage
+export default SliderImage;

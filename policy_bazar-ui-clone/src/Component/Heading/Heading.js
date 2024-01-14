@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Heading.css"
+
 const heqadingSlider = [
   {
     image: "assets/heading_slider/heading_slider_1.png",
