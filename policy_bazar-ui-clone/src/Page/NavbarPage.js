@@ -4,6 +4,7 @@ import Heading from "../Component/Heading/Heading";
 import Products from "../Component/products/Products";
 import AlsoBySection from "../Component/AlsoBuy/AlsoBySection";
 import SliderImage from "../Component/SliderImage/SliderImage";
+import WhyPolicyBazar from "../Component/WhyPolicyBazar/WhyPolicyBazar";
 
 const NavbarPage = () => {
   return (
@@ -13,6 +14,7 @@ const NavbarPage = () => {
       <Products/>
       <AlsoBySection/>
       <SliderImage/>
+      <WhyPolicyBazar/>
     </>
   );
 };
