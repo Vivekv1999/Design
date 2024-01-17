@@ -5,6 +5,8 @@ import Products from "../Component/products/Products";
 import AlsoBySection from "../Component/AlsoBuy/AlsoBySection";
 import SliderImage from "../Component/SliderImage/SliderImage";
 import WhyPolicyBazar from "../Component/WhyPolicyBazar/WhyPolicyBazar";
+import SmallSLider from "../Component/SmallSlider/SmallSLider";
+import Advantages from "../Component/Advantages/Advantages";
 
 const NavbarPage = () => {
   return (
@@ -15,6 +17,8 @@ const NavbarPage = () => {
       <AlsoBySection/>
       <SliderImage/>
       <WhyPolicyBazar/>
+      <SmallSLider/>
+      <Advantages/>
     </>
   );
 };
