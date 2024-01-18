@@ -1,4 +1,33 @@
+import { Description } from "@mui/icons-material";
 import React from "react";
+
+const cardDetails = [
+  {
+    image: "lllllllll",
+    heading: "One of the best Prices",
+    description: "Guaranteed",
+  },
+  {
+    image: "lllllllll",
+    heading: "Unbiased Advice",
+    description: "Keeping customers first",
+  },
+  {
+    image: "lllllllll",
+    heading: "100% Reliable",
+    description: "Regulated by IRDAI",
+  },
+  {
+    image: "lllllllll",
+    heading: "Claims Support",
+    description: "Made stress-free",
+  },
+  {
+    image: "lllllllll",
+    heading: "Happy to Help",
+    description: "Every day of the week",
+  },
+];
 
 const Advantages = () => {
   return (
@@ -11,7 +40,22 @@ const Advantages = () => {
           terms and conditions, quick stress-free claims, instant quotes from
           top insurers and being present for you in the toughest of times.
         </section>
-        <span className="mt-3" style={{color:"#0065ff"}}>Know more</span>
+        <span className="mt-3" style={{ color: "#0065ff" }}>
+          Know more
+        </span>
+        <div className="flex justify-between">
+          {cardDetails.map((d) => {
+            return (
+              <>
+                <card className="flex w-2/12 flex-col p-3 border-solid border-2 border-indigo-600 tracking-wide">
+                  <img src="" alt="" />
+                  <heading className="text-[20px] justify-end">{d.heading}</heading>
+                  <description className="text-[14px] justify-end">{d.description}</description>
+                </card>
+              </>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
