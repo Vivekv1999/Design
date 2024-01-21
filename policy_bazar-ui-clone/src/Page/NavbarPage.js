@@ -8,6 +8,7 @@ import WhyPolicyBazar from "../Component/WhyPolicyBazar/WhyPolicyBazar";
 import SmallSLider from "../Component/SmallSlider/SmallSLider";
 import Advantages from "../Component/Advantages/Advantages";
 import GetApp from "../Component/GetApp/GetApp";
+import CustomerReview from "../Component/CustomerReview/CustomerReview";
 
 const NavbarPage = () => {
   return (
@@ -21,6 +22,7 @@ const NavbarPage = () => {
       <SmallSLider/>
       <Advantages/>
       <GetApp/>
+      <CustomerReview/>
     </>
   );
 };
