@@ -9,6 +9,7 @@ import SmallSLider from "../Component/SmallSlider/SmallSLider";
 import Advantages from "../Component/Advantages/Advantages";
 import GetApp from "../Component/GetApp/GetApp";
 import CustomerReview from "../Component/CustomerReview/CustomerReview";
+import Partners from "../Component/Partners/Partners";
 
 const NavbarPage = () => {
   return (
@@ -23,6 +24,7 @@ const NavbarPage = () => {
       <Advantages/>
       <GetApp/>
       <CustomerReview/>
+      <Partners/>
     </>
   );
 };

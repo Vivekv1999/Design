@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.partner_logo{
+    filter: grayscale(90%);
+}
+.partner_logo:hover{
+    filter: grayscale(0%);
+}

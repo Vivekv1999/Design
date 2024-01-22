@@ -5,44 +5,48 @@ import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import Slider from "react-slick";
 import { Divider } from "@mui/material";
 const CustomerReviews = [
-  { title: "Customer tiles", description: "Customer" },
-  { title: "Customer titles", description: "Customer" },
-//   { title: "Customer titles", description: "Customer" },
-//   { title: "Customer titles", description: "Customer" },
+  { title: "Urvashi solanki", description: "Customer" },
+  { title: "sonia khanna", description: "Customer" },
+    { title: "Rashami sisrtha", description: "Customer" },
+    { title: "Bhashkar lokhande", description: "Customer" },
+    { title: "Parag lele", description: "Customer" },
+    { title: "Shardhdha sharma", description: "Customer" },
+    { title: "Prabhat yadav", description: "Customer" },
+    { title: "Ananth narayan", description: "Customer" },
+    { title: "Neha jain", description: "Customer" },
 ];
 
 const CustomerReview = () => {
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: false,
-        speed: 500,
-        autoplaySpeed: 4000,
-        cssEase: "linear",
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-            },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-            },
-          },
-          {
-            breakpoint: 640,
-            settings: {
-              slidesToShow: 1,
-            },
-          },
-        ],
-      };
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: false,
+    speed: 500,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -58,23 +62,21 @@ const CustomerReview = () => {
             <EastIcon />
           </section>
           <div className="mt-4 mb-28">
-          {/* <Slider {...settings}> */}
-            {/* {CustomerReviews.map((item) => {
-              return ( */}
-                <card className="h-64 w-34 border-4 border-indigo-300 shadow-[10px_10px_15px_5px_rgba(143,131,131,0.4)] ">
-                  <section className="my-3">{"item.title"}</section>
-                  <section className="items-center gap-3">
-                    <FormatQuoteIcon className="text-indigo-400" />
-                    <description className="">
-                    {"item.description"}
-                    </description>
-                  </section>
-                </card>
-              {/* );
-            })} */}
-            {/* </Slider> */}
+            <Slider {...settings}>
+              {CustomerReviews.map((item) => {
+                return (
+                  <div className="h-64 border-2 rounded-lg w-1/4 border-indigo-300 shadow-[3px_5px_15px_2px_rgba(143,131,131,0.4)] ">
+                    <section className="my-3 flex justify-center">{item.title}</section>
+                    <section className="items-center flex flex-col justify-center gap-3">
+                      <FormatQuoteIcon className="text-indigo-400" />
+                      <description className="">{item.description}</description>
+                    </section>
+                  </div>
+                );
+              })}
+            </Slider>
           </div>
-          <Divider/>
+          <Divider />
         </div>
       </div>
     </>
