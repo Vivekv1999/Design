@@ -10,6 +10,7 @@ import Advantages from "../Component/Advantages/Advantages";
 import GetApp from "../Component/GetApp/GetApp";
 import CustomerReview from "../Component/CustomerReview/CustomerReview";
 import Partners from "../Component/Partners/Partners";
+import QuestionHelp from "../Component/QuenstionHelp/QuestionHelp";
 
 const NavbarPage = () => {
   return (
@@ -25,6 +26,7 @@ const NavbarPage = () => {
       <GetApp/>
       <CustomerReview/>
       <Partners/>
+      <QuestionHelp/>
     </>
   );
 };
