@@ -12,6 +12,7 @@ import CustomerReview from "../Component/CustomerReview/CustomerReview";
 import Partners from "../Component/Partners/Partners";
 import QuestionHelp from "../Component/QuenstionHelp/QuestionHelp";
 import GroupBrands from "../Component/GroupBrands/GroupBrands";
+import Footer from "../Component/Footer/Footer";
 
 const NavbarPage = () => {
   return (
@@ -29,6 +30,7 @@ const NavbarPage = () => {
       <Partners/>
       <QuestionHelp/>
       <GroupBrands/>
+      <Footer/>
     </>
   );
 };

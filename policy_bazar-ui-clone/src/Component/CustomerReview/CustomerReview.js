@@ -65,12 +65,14 @@ const CustomerReview = () => {
             <Slider {...settings}>
               {CustomerReviews.map((item) => {
                 return (
-                  <div className="h-64 border-2 rounded-lg w-1/4 border-indigo-300 shadow-[3px_5px_15px_2px_rgba(143,131,131,0.4)] ">
+                  <div className="w-1/4 p-5">
+                  <div className="h-64 border-2 rounded-lg shadow-[3px_5px_5px_2px_rgba(143,131,131,0.1)] ">
                     <section className="my-3 flex justify-center">{item.title}</section>
                     <section className="items-center flex flex-col justify-center gap-3">
                       <FormatQuoteIcon className="text-indigo-400" />
                       <description className="">{item.description}</description>
                     </section>
+                  </div>
                   </div>
                 );
               })}
